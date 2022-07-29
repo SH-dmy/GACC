@@ -7,37 +7,103 @@ import Test from './components/test.vue'
 
 <template>
   <div>
-    <div class="header" style="background: #fff;">
-      <div class="logo">
-          <h1>GACC统一账号平台</h1>
-      </div>
-      <div class="user-box">
-          <ul class="catagory">
-            <li class="current">
-              <a href="http://gacc.oa.com/">首页</a>
-            </li>
-            <li id="projectServiceID">
-              <a href="http://odpclp.oa.com/" target="_blank">产品服务</a>
-            </li>
-            <li id="peoduct_sub">
-              <a class="has-sub" href="javascript:;">帮助中心</a>
-              <!-- <ul class="sub-nav">
-                <li>
-                  <a href="http://ce.oa.com/products/view/2340?&tab_id=all_issues_btn" target="_blank">用户反馈</a>
-                </li>
-                <li>
-                  <a href="http://gacc.odptcp.oa.com/#/businesApply" target="_blank">权限申请</a>
-                </li>
-                <li>
-                  <a href="https://iwiki.woa.com/space/gacc" target="_blank">文档中心</a>
-                </li>
-              </ul> -->
-            </li>
-          </ul>
-          <div class="login">
-            <!-- data-trace-id??? -->
-            <a href="http://gacc.odpclp.oa.com" class="button_entry" target="_blank" data-trace-id="mp_h_free">开始使用</a>
-          </div>
+    <div class="header">
+      <h1 style="font-size:20px; width:260px; height:34px;"> GACC统一账号平台</h1>
+      <ul class="user-box">
+          <li class="current">
+            <a href="http://gacc.oa.com/">首页</a>
+          </li>
+           <li id="projectServiceID">
+             <a href="http://odpclp.oa.com/" target="_blank">产品服务</a>
+           </li>
+           <li id="peoduct_sub">
+             <a class="has-sub" href="javascript:;">帮助中心</a>
+             <!-- <ul class="sub-nav">
+              <li>
+                 <a href="http://ce.oa.com/products/view/2340?&tab_id=all_issues_btn" target="_blank">用户反馈</a>
+               </li>
+              <li>
+                <a href="http://gacc.odptcp.oa.com/#/businesApply" target="_blank">权限申请</a>
+               </li>
+               <li>
+                <a href="https://iwiki.woa.com/space/gacc" target="_blank">文档中心</a>
+              </li>
+            </ul> -->
+           </li>
+        </ul>
+       <a-button class="login" style="width:82px; height:32px;">开始使用</a-button>
+    </div>
+    <div class="banner">
+      <img src="../public/banner-cus-export1.png" alt="">
+    </div>
+    <div class="main-container">
+      <ul class="targets">
+      <li class="taget1">
+        <img src="../public/target.png" alt="" style="width:72px; height:72px;">
+        <h3>目标一</h3>
+        <p>统一并拓展游戏大盘帐号信息流的服务渠道<br>
+           并通过建立以统一账户为核心的用户信息数据湖<br>
+           实现关键数据的统一归集<br>
+           丰富游戏帐号数据维度
+        </p>
+      </li>
+      <li class="taget2">
+        <img src="../public/target.png" alt="" style="width:72px; height:72px;">
+        <h3>目标一</h3>
+        <p>统一并拓展游戏大盘帐号信息流的服务渠道<br>
+           并通过建立以统一账户为核心的用户信息数据湖<br>
+           实现关键数据的统一归集<br>
+           丰富游戏帐号数据维度
+        </p>
+      </li>
+      <li class="taget3">
+        <img src="../public/target.png" alt="" style="width:72px; height:72px;">
+        <h3>目标一</h3>
+        <p>统一并拓展游戏大盘帐号信息流的服务渠道<br>
+           并通过建立以统一账户为核心的用户信息数据湖<br>
+           实现关键数据的统一归集<br>
+           丰富游戏帐号数据维度
+        </p>
+      </li>
+    </ul>
+    </div>
+    <div class="bottom-container">
+      <div class="wrapper">
+        <h2 class="index-tit">服务功能</h2>
+        <ul class="functions">
+          <li>
+            <div class="item">
+              <h4>账号映射服务</h4>
+              <span style="font-size:12px;">解决游戏出海合规</span>
+              <!-- 待实现：鼠标悬停时出现 且有背景色
+              <p>账号映射服务<br>
+                解决游戏出海合规
+              </p> -->
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <h4>账号映射服务</h4>
+              <span style="font-size:12px;">解决游戏出海合规</span>
+              <!-- 待实现：鼠标悬停时出现 且有背景色
+              <p>账号映射服务<br>
+                解决游戏出海合规
+              </p> -->
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <h4>账号映射服务</h4>
+              <span style="font-size:12px;">解决游戏出海合规</span>
+              <!-- 待实现：鼠标悬停时出现 且有背景色
+              <p>账号映射服务<br>
+                解决游戏出海合规
+              </p> -->
+            </div>
+          </li>
+        </ul>
+        <h2 class="index-tit">FAQ</h2>
+        
       </div>
     </div>
   </div>
@@ -77,49 +143,119 @@ import Test from './components/test.vue'
 </template>
 
 <style scoped>
- div {
-  font: 12px/1.5 tahoma, arial, PingFang SC, Microsoft Yahei, sans-serif;
- }
+
  .header {
-  width: 1250px;
-  height: 61.25px;
+  width: auto;
+  height: 61px;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
  }
- .logo {
-  width: 260px;
-  height: 34px;
- }
+ 
  .user-box {
-  width: 800px;
+  width:260px;
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: start;
+  align-items: center;
+  background-color: greenyellow;
  }
- .catagory {
- }
- /* .current {
-  width: 52px;
-  height: 60px;
- } */
- .login {
-  width: 100px;
-  height: 60px;
- }
- h1 {
-  display: block;
-  font-size: 2em;
-  font-weight: 400;
-  margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
- }
- li, ul {
-    list-style: none;
+
+p {
+  background-color: antiquewhite;
+  font-size: 16px;
 }
 
+/* h1 {
+  font-weight: 400px;
+} */
+
+li {
+    font-size: 12px;
+    list-style: none;
+    margin-left: 20px;
+}
+
+a:link {
+  color: #333;
+}
+a:hover {
+  color: #447ed9;
+}
+
+.banner {
+  width: 100%;
+  height: 430px;
+  background-color: #63c0e1;
+  background-position: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+   width: 100%;
+   height: 436px;
+   display: flex;
+   align-items: center;
+   background-color: antiquewhite;
+}
+.targets {
+  width: 100%;
+  height: 326px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+}
+
+.targets>li {
+  /* 未生效 */
+  width: 326px; 
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-content: center; */
+  background-color: red;
+}
+
+p {
+  font-size: 12px;
+}
+
+.bottom-container {
+  height: 2000px;
+  /* display: flex;
+  align-items: center; */
+  background-color:  #eef4f9;
+}
+
+.index-tit {
+    margin-bottom: 40px;
+    color: #4b76b9;
+    font-size: 22px;
+    text-align: center;
+}
+
+.item{
+  background-image: url('../public/data_info_bg.png');
+  /* background-position: 100% 100%; */
+  /* background-size: 25%; */
+  /* background-repeat: no-repeat; */
+}
+
+.functions {
+  background-color: red;
+ width: auto;
+ height: 548px;
+ display: flex;
+ justify-content: center;
+}
+
+.functions>li {
+  background-color:beige;
+  
+}
 /* .header {
   position: relative;
 }
