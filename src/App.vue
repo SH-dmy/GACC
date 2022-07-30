@@ -1,14 +1,11 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-import Test from './components/test.vue'
+
 </script>
 
 <template>
   <div>
     <div class="header">
-      <h1 style="font-size:20px; width:260px; height:34px;"> GACC统一账号平台</h1>
+      <h1 style="font-size:20px; width:260px; height:34px; text-align:center;"> GACC统一账号平台</h1>
       <ul class="user-box">
           <li class="current">
             <a href="http://gacc.oa.com/">首页</a>
@@ -31,7 +28,7 @@ import Test from './components/test.vue'
             </ul> -->
            </li>
         </ul>
-       <a-button class="login" style="width:82px; height:32px;">开始使用</a-button>
+       <button type="button" class="login">开始使用</button>
     </div>
     <div class="banner">
       <img src="../public/banner-cus-export1.png" alt="">
@@ -103,9 +100,51 @@ import Test from './components/test.vue'
           </li>
         </ul>
         <h2 class="index-tit">FAQ</h2>
-        
+        <div class="query">
+          <div class="QA">
+            Q: 什么是游戏统一账号？<br>
+            A: 统一账号是一套账号映射服务，它将游戏业务中各渠道的OpenID统一映射为游戏GopenID，解决游戏出海， 数据合规的一系列问题。
+          </div>
+          <div class="QA">
+            Q: 统一账号的格式是什么样的？<br>
+            A: 统一账号类型根据业务可灵活配置，主要为：<br>
+              • 字符型<br>
+              • 无符号整型<br>
+              具体可咨询统一帐号助手（GACC助手）
+          </div>
+          <div class="QA">
+            Q: 有了统一账号后，业务的的接入流程有哪些变化？<br>
+            A: 业务需要支持账号的长度。
+          </div>
+          <div class="QA"> 
+            Q: 如何选择账号长度？<br>
+            A: 请根据实际情况选择，如果不清楚，可与游戏服务器开发人员获取建议。我们建议使用64位无符号整型。
+          </div>
+          <div class="QA">
+           Q: 什么是游戏统一账号？<br>
+           A: 主要有以下变化：<br>
+             • 接入统一账号后，游戏拿到的不再是渠道的OpenID，而是统一帐号的GOpenID；<br>
+             • 游戏可以直接使用这个数据做用户数据在DB中的key；<br>
+             • 与MSDK相关的接口，需要传递OpenID的参数，改成传递GOpenID或者参考MSDK的文档；<br>
+             • IDIP请求传递给游戏业务的不再是OpenID，而是GOpenID，如果业务用它来做用户的key，可以直接定位到 用户，不再需要进一步转换；<br>
+             • 业务受理也同时支持统一账号。
+          </div>
+          <div class="QA">
+            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br>
+            A: 统一账号是一个后台服务，理论上对业务透明，所有服务访问通过MSDK代理，业务只需要和MSDK交互，没有 SDK对接工作量。
+          </div>
+          <div class="QA">
+            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br>
+            A: 统一账号是一个后台服务，理论上对业务透明，所有服务访问通过MSDK代理，业务只需要和MSDK交互，没有 SDK对接工作量。
+          </div>
+          <div class="QA">
+            Q: 业务接入统一帐号后，已有的基于OpenID的服务，以后的运营活动等该如何兼容？<br>
+            A: 已有的服务，会有托管服务进行兼容，对调用方无感知，主要调用方式不会发生变化。具体场景可咨询GACC助手。
+          </div>
+        </div>
       </div>
     </div>
+    <div class="footer">游戏统一账号 Copyright © 1998 - 2022 Tencent. All Rights Reserved. 腾讯公司 版权所有</div>
   </div>
 
   <!-- <div class="header" style="background: #fff;">
@@ -122,7 +161,7 @@ import Test from './components/test.vue'
             <li id="projectServiceID">
               <a href="http://odpclp.oa.com/" target="_blank">产品服务</a>
             </li>
-            <li id="peoduct_sub">
+            <li id="peoduct_su<b">
               <a class="has-sub" href="javascript:;">帮助中心</a>
             </li>
           </ul>
@@ -146,21 +185,40 @@ import Test from './components/test.vue'
 
  .header {
   width: auto;
-  height: 61px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: aqua;
  }
  
+ h1 {
+   font-size:20px;
+   /* flex: 1; */
+ }
+
  .user-box {
-  width:260px;
+  /* width:260px; */
   height: 60px;
+  /* flex: 1; */
   display: flex;
   justify-content: start;
   align-items: center;
   background-color: greenyellow;
  }
+
+button {
+  width: 82px;
+  height: 32px;
+  /* flex: 1; */
+  color: #447ed9;
+  background-color: white;
+  border: 1px solid #447ed9;
+}
+button:hover {
+  background-color: blue;
+  color: white;
+}
 
 p {
   background-color: antiquewhite;
@@ -255,6 +313,16 @@ p {
 .functions>li {
   background-color:beige;
   
+}
+
+.query {
+  background-color: white;
+}
+
+.QA {
+  height: 180px;
+  margin: 1px ;
+  letter-spacing: 1px;
 }
 /* .header {
   position: relative;
