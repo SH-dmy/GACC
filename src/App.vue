@@ -11,7 +11,11 @@ const toTop = () => {
 };
 
 const jump = () => {
-  window.location.href = "https://www.baidu.com/"
+  window.location.href = "https://passport.woa.com/modules/passport/signin.ashx?url=http%3A%2F%2Fgacc.odpclp.oa.com%2F%23%2F"
+};
+
+const ask = () => {
+  alert('111');
 }
 
 </script>
@@ -122,43 +126,43 @@ const jump = () => {
           <h2>FAQ</h2>
         <div class="faqs-box">
           <div class="faq">
-            Q: 什么是游戏统一账号？<br>
+            Q: 什么是游戏统一账号？<br/>
             A: 统一账号是一套账号映射服务，它将游戏业务中各渠道的OpenID统一映射为游戏GopenID，解决游戏出海， 数据合规的一系列问题。
           </div>
           <div class="faq">
-            Q: 统一账号的格式是什么样的？<br>
-            A: 统一账号类型根据业务可灵活配置，主要为：<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;• 字符型<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;• 无符号整型<br>
+            Q: 统一账号的格式是什么样的？<br/>
+            A: 统一账号类型根据业务可灵活配置，主要为：<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;• 字符型<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;• 无符号整型<br/>
               &nbsp;&nbsp;&nbsp;&nbsp;具体可咨询统一帐号助手（GACC助手）
           </div>
           <div class="faq">
-            Q: 有了统一账号后，业务的的接入流程有哪些变化？<br>
+            Q: 有了统一账号后，业务的的接入流程有哪些变化？<br/>
             A: 业务需要支持账号的长度。
           </div>
           <div class="faq"> 
-            Q: 如何选择账号长度？<br>
+            Q: 如何选择账号长度？<br/>
             A: 请根据实际情况选择，如果不清楚，可与游戏服务器开发人员获取建议。我们建议使用64位无符号整型。
           </div>
           <div class="faq">
-           Q: 什么是游戏统一账号？<br>
-           A: 主要有以下变化：<br>
-             &nbsp;&nbsp;&nbsp;&nbsp;• 接入统一账号后，游戏拿到的不再是渠道的OpenID，而是统一帐号的GOpenID；<br>
-             &nbsp;&nbsp;&nbsp;&nbsp;• 游戏可以直接使用这个数据做用户数据在DB中的key；<br>
-             &nbsp;&nbsp;&nbsp;&nbsp;• 与MSDK相关的接口，需要传递OpenID的参数，改成传递GOpenID或者参考MSDK的文档；<br>
-             &nbsp;&nbsp;&nbsp;&nbsp;• IDIP请求传递给游戏业务的不再是OpenID，而是GOpenID，如果业务用它来做用户的key，可以直接定位到 用户，不再需要进一步转换；<br>
+           Q: 什么是游戏统一账号？<br/>
+           A: 主要有以下变化：<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;• 接入统一账号后，游戏拿到的不再是渠道的OpenID，而是统一帐号的GOpenID；<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;• 游戏可以直接使用这个数据做用户数据在DB中的key；<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;• 与MSDK相关的接口，需要传递OpenID的参数，改成传递GOpenID或者参考MSDK的文档；<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;• IDIP请求传递给游戏业务的不再是OpenID，而是GOpenID，如果业务用它来做用户的key，可以直接定位到 用户，不再需要进一步转换；<br/>
              &nbsp;&nbsp;&nbsp;&nbsp;• 业务受理也同时支持统一账号。
           </div>
           <div class="faq">
-            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br>
+            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br/>
             A: 统一账号是一个后台服务，理论上对业务透明，所有服务访问通过MSDK代理，业务只需要和MSDK交互，没有 SDK对接工作量。
           </div>
           <div class="faq">
-            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br>
+            Q: 统一账号有SDK吗？业务需要对接统一账号的SDK吗？<br/>
             A: 统一账号是一个后台服务，理论上对业务透明，所有服务访问通过MSDK代理，业务只需要和MSDK交互，没有 SDK对接工作量。
           </div>
           <div class="faq">
-            Q: 业务接入统一帐号后，已有的基于OpenID的服务，以后的运营活动等该如何兼容？<br>
+            Q: 业务接入统一帐号后，已有的基于OpenID的服务，以后的运营活动等该如何兼容？<br/>
             A: 已有的服务，会有托管服务进行兼容，对调用方无感知，主要调用方式不会发生变化。具体场景可咨询GACC助手。
           </div>
         </div>
@@ -169,63 +173,16 @@ const jump = () => {
 
     <div class="fixed-box">
       <div class="consutation" @mouseover="() => state.isTextShow = true" @mouseleave="() => state.isTextShow = false">
-        <img src="../public/target.png" >
-        <span v-if="state.isTextShow" >在线咨询</span>
+        <img src="../public/customer-service.png" >
+        <span v-if="state.isTextShow" @click="ask">在线咨询</span>
       </div>
       <div class="to-top" @click="toTop">
         返回<br/>顶部
       </div>
     </div>
-    <!-- <div class="img">
-       <ul v-if = "state.isShow" @mouseleave="() => state.isShow = false" class="sub-nav">
-              <li> 
-                 <a href="http://ce.oa.com/products/view/2340?&tab_id=all_issues_btn" target="_blank">用户反馈</a>
-               </li>
-              <li>
-                <a href="http://gacc.odptcp.oa.com/#/businesApply" target="_blank">权限申请</a>
-               </li>
-               <li>
-                <a href="https://iwiki.woa.com/space/gacc" target="_blank">文档中心</a>
-              </li>
-        </ul>      
-        <img class="banner" src="../public/banner-cus-export1.png" alt="">
-    </div> -->
-
+    
     <div class="footer">游戏统一账号 Copyright © 1998 - 2022 Tencent. All Rights Reserved. 腾讯公司 版权所有</div>
   </div>
-
-  <!-- <div class="header" style="background: #fff;">
-    <div class="wrapper">
-      <div class="top-bar">
-        <div class="logo">
-          <h1>GACC统一账号平台</h1>
-        </div>
-        <div class="user-box">
-          <ul>
-            <li class="current">
-              <a href="http://gacc.oa.com/">首页</a>
-            </li>
-            <li id="projectServiceID">
-              <a href="http://odpclp.oa.com/" target="_blank">产品服务</a>
-            </li>
-            <li id="peoduct_su<b">
-              <a class="has-sub" href="javascript:;">帮助中心</a>
-            </li>
-          </ul>
-          <div class="login">
-            data-trace-id???
-            <a href="http://gacc.odpclp.oa.com" class="button_entry" target="_blank" data-trace-id="mp_h_free">开始使用</a>
-          </div>
-        </div>
-      </div>
-    </div>   
-  </div>
-  
-  <div id="div_banner" class="bdata_banner banner">
-    <div style="width: 100%; height: 430px;background-color: #63C0E1;background-image: url(./public/banner-cus-export1.png);background-position: 50%;background-size: auto 100%;background-repeat: no-repeat; ">
-    </div>
-    <img src="./public/banner-cus-export1.png"/>
-  </div> -->
 </template>
 
 <style scoped>
@@ -233,6 +190,7 @@ const jump = () => {
    margin: 0px;
    padding: 0px;
    list-style: none;
+   font: 12px/1.5 tahoma, arial, PingFang SC, Microsoft Yahei, sans-serif;
  }
 
  .header {
@@ -241,7 +199,6 @@ const jump = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: aqua; */
  }
  
  .header h1 {
@@ -252,14 +209,7 @@ const jump = () => {
  }
 
  .menu {
-  /* width:260px; */
-  /* height: 60px; */
-  /* flex: 1; */
-  /* display: flex;
-  justify-content: start;
-  align-items: center; */
   display: flex;
-  /* background-color: greenyellow; */
  }
 
 .login {
@@ -277,11 +227,6 @@ const jump = () => {
   color: white;
 }
 
-
-/* h1 {
-  font-weight: 400px;
-} */
-
 .header li {
     margin-left: 20px;
     margin-right: 20px;
@@ -295,9 +240,9 @@ a:hover {
   color: #447ed9;
 }
 
-a:visited {
+/* a:visited {
   color: #333;
-}
+} */
 
 
 .img {
@@ -321,26 +266,17 @@ a:visited {
 }
 
 .banner {
-  /* background-color: #63c0e1;
-  background-position: 50%;
-  background-size: auto 100%;
-  background-repeat: no-repeat; */
   width: 100%;
 }
 
 .targets {
-  /* width: 100%;
-  height: 326px; */
   padding: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: yellowgreen; */
 }
 
 .target {
-  /* display: flex;
-  justify-content: center; */
   text-align: center;
 }
 
@@ -367,9 +303,6 @@ a:visited {
 .bottom-container {
   display: flex;
   flex-direction: column;
-  /* height: 2000px; */
-  /* display: flex;
-  align-items: center; */
   align-items: center;
   background-color:  #eef4f9;
 }
@@ -395,6 +328,7 @@ a:visited {
 .functions li {
   padding: 30px;
   width: 300px;
+  height: 120px;
   font-size: 12px;
   text-align: center;
   margin: 10px 0;
@@ -409,7 +343,6 @@ a:visited {
   background-image: none;
   background-color: #19a0d4;
   color: white;
-  /* font-size: 12px; */
 }
 
 .functions p {
@@ -417,10 +350,13 @@ a:visited {
   margin-bottom: 5px;
 }
 
-/* .functions>li {
-  background-color:beige;
-  
-} */
+.functions li:hover p {
+  font-size: 14px;
+}
+
+.functions li:hover span {
+  font-size: 16px;
+}
 
 .faqs {
   width: 950px;
@@ -429,7 +365,6 @@ a:visited {
 .faqs h2 {
   padding-top: 0px;
   padding-bottom: 30px;
-  /* background-color: blue; */
 }
 
 .faqs-box {
@@ -449,6 +384,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  /* justify-content: center; */
 }
 
 .consutation {
@@ -457,13 +393,17 @@ a:visited {
   display: flex;
   justify-content: space-around;
   background-color: #08a3e9;
+  /* text-align: center; */
 }
 
 .consutation img {
- width: 25px;
- height: 25px;
- /* margin-left: 5px; */
- /* background: white; */
+ margin: 5px;
+ width: 15px;
+ height: 15px;
+}
+
+.consutation span {
+  margin: 5px 0;
 }
 
 .to-top {
@@ -482,70 +422,5 @@ a:visited {
   color: white;
   background-color: #2f3644;
 }
-/* .header {
-  position: relative;
-}
-div {
-  display: block;
-} */
-
-/* .header .wrapper {
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    border-bottom: 1px solid #eaeaea;
-    box-shadow: 0 0 10px rgb(0 0 0 / 5%);
-} */
-/* .wrapper {
-    position: relative;
-    margin: 0 auto;
-    padding: 0;
-    width: 1200px;
-} */
-
-/* .header .top-bar {
-    z-index: 106;
-    padding: 0 20px;
-    min-width: 768px;
-    background: #fff;
-    text-align: center;
-}
-.header .logo h1 {
-  width: 260px;
-  height: 34px;
-}
-h1 {
-  display: block;
-  font-size: 2em;
-  margin-block-start: 0.67em;
-  margin-block-end: 0.67em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-.header .user-box>ul .current>a {
-    color: #447ed9;
-}
-.header .user-box>ul>li>a {
-    display: block;
-    padding: 18px 10px;
-    color: #555;
-    font-size: 16px;
-}
-/* 除去实心黑点 */
-/* li, ul {
-    list-style: none;
-}
-
-.header .user-box>ul>li {
-    float: left;
-    margin-right: 13px;
-}
-dd, h1, h2, h3, h4, h5, li, ol, p, ul {
-    margin: 0;
-    padding: 0;
-}  */
 
 </style>
